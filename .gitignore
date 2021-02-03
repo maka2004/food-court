@@ -25,6 +25,7 @@ node_modules/
 info.txt
 
 .vscode
+.idea
 
 wp-config.php
 
