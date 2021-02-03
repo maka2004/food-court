@@ -22,7 +22,11 @@ wp_body_open();
 ?>
 
 <header id="site-header" class="header-footer-group" role="banner">
-
+    <?php
+        wp_nav_menu([
+            'menu' => 'main_menu'
+        ]);
+    ?>
 </header><!-- #site-header -->
 
 <?php
