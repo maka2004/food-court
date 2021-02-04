@@ -1,10 +1,18 @@
 <?php
+
+    class constants {
+        const POST_TYPE_POINT = 'point';
+        const POST_TYPE_KITCHEN = 'kitchen';    
+    }
+
     //
     add_theme_support('menus');
+    add_theme_support('post-thumbnails');
 
     add_action( 'init', 'register_post_types' );
     function register_post_types(){
-        register_post_type( 'point', [
+        /* Category Point (food company) */
+        register_post_type( constants::POST_TYPE_POINT, [
             'label'  => null,
             'labels' => [
                 'name'               => 'Point', // основное название для типа записи
@@ -12,7 +20,7 @@
                 'add_new'            => 'Добавить Point', // для добавления новой записи
                 'add_new_item'       => 'Добавление Point', // заголовка у вновь создаваемой записи в админ-панели.
                 'edit_item'          => 'Редактирование Point', // для редактирования типа записи
-                'new_item'           => 'Новое Point', // текст новой записи
+                'new_item'           => 'Новый Point', // текст новой записи
                 'view_item'          => 'Смотреть Point', // для просмотра записи этого типа.
                 'search_items'       => 'Искать Point', // для поиска по этим типам записи
                 'not_found'          => 'Не найдено', // если в результате поиска ничего не было найдено
@@ -42,4 +50,60 @@
             'rewrite'             => true,
             'query_var'           => true,
         ] );
+
+        /* Category Kitchen */
+        register_post_type( constants::POST_TYPE_KITCHEN, [
+            'label'  => null,
+            'labels' => [
+                'name'               => 'Kitchen',
+                'singular_name'      => 'Kitchen',
+                'add_new'            => 'Добавить Kitchen',
+                'add_new_item'       => 'Добавление Kitchen',
+                'edit_item'          => 'Редактирование Kitchen',
+                'new_item'           => 'Новае Kitchen',
+                'view_item'          => 'Смотреть Kitchen',
+                'search_items'       => 'Искать Kitchen',
+                'not_found'          => 'Не найдено',
+                'not_found_in_trash' => 'Не найдено в корзине',
+                'parent_item_colon'  => '',
+                'menu_name'          => 'Kitchens',
+            ],
+            'description'         => '',
+            'public'              => true,
+            'show_in_menu'        => null,
+            'show_in_rest'        => null,
+            'rest_base'           => null,
+            'menu_position'       => null,
+            'menu_icon'           => 'dashicons-admin-site-alt',
+            'hierarchical'        => false,
+            'supports'            => [ 'title', 'editor', 'thumbnail' ],
+            'taxonomies'          => [],
+            'has_archive'         => true,
+            'rewrite'             => true,
+            'query_var'           => true,
+        ] );
+    }
+
+    /* ACF data */
+    get_template_part('inc/fields');
+
+    /* Get kitchen dictionary */
+    function get_kitchens_list() {
+        $posts = get_posts([
+            'numberposts' => 0,
+            'post_type'   => constants::POST_TYPE_KITCHEN,
+            'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+        ]);
+
+        $kitchens = [];
+        
+        foreach( $posts as $post ) {
+            $kitchens[$post->ID] = [
+                'title' => urldecode($post->post_name),
+                'image' => get_the_post_thumbnail_url($post->ID, 'thumbnail'),
+                'description' => $post->post_content
+            ];
+        }
+        
+        return $kitchens;
     }
