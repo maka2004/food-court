@@ -1,14 +1,32 @@
 <?php
 
-    class constants {
-        const POST_TYPE_POINT = 'point';
-        const POST_TYPE_KITCHEN = 'kitchen';    
+    /* Constants */
+    if (!defined('THEME_PATH')) {
+        define('THEME_PATH', get_template_directory_uri()); // w.o. slash
     }
 
-    //
+    class constants {
+        const POST_TYPE_POINT = 'point';
+        const POST_TYPE_KITCHEN = 'kitchen';
+    }
+
+    // theme support
     add_theme_support('menus');
     add_theme_support('post-thumbnails');
 
+    /* Scripts */
+    add_action( 'wp_enqueue_scripts', 'theme_add_scripts' );
+    function theme_add_scripts() {
+        // css
+        // wp_enqueue_style( 'style-name', get_stylesheet_uri() . '/style.css' );
+        wp_enqueue_style( 'style-bootstrap', THEME_PATH . '/css/bootstrap.min.css' );
+        wp_enqueue_style( 'style-main', THEME_PATH . '/css/style.css' );
+
+        // js
+        wp_enqueue_script( 'script-bootstrap', THEME_PATH . '/js/bootstrap.min.js', array(), '1.0', true );
+    }
+
+    /* Post types */
     add_action( 'init', 'register_post_types' );
     function register_post_types(){
         /* Category Point (food company) */
@@ -84,7 +102,7 @@
         ] );
     }
 
-    /* ACF data */
+    /* ACF fields */
     get_template_part('inc/fields');
 
     /* Get kitchen dictionary */
