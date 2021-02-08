@@ -15,6 +15,11 @@
 
 </head>
 
+<?php
+    // remove after deply to PROD
+    ob_start(null, 0, PHP_OUTPUT_HANDLER_REMOVABLE);
+?>
+
 <body <?php body_class(); ?>>
 
 <?php
