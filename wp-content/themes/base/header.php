@@ -78,6 +78,56 @@ wp_body_open();
         </div>
     </div>
 
+    <div class="header-middle">
+        <div class="container">
+            <div class="header-middle-wrap">
+                <div class="info-header">
+                    <div class="textwidget">
+                        <div class="worktime"><i class="icons icon-clock-arrows"></i><span>Круглосуточно.<br> Перерыв: с 6-00 до 10-00</span>
+                        </div>
+                        <div class="header-phones">
+                            <i class="icons icon-phone"></i>
+                            <ul class="header-phones__list"><li><a href="tel:+380577802877" aria-hidden="true">+38 (057) 7802877</a></li><li><a href="tel:+380984868877" aria-hidden="true">+38 (098) 4868877</a></li><li><a href="tel:+380994538877" aria-hidden="true">+38 (099) 4538877</a></li><li><a href="tel:+380934198877" aria-hidden="true">+38 (093) 4198877</a></li></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo-wrap">
+                    <div class="logo">
+                        
+                            <img src="<?php echo THEME_PATH . '/img/food-court-logo_main.png'; ?>" alt="Food-Court">
+                        
+                    </div>
+                </div>
+                <div class="block-right-header">
+                    <div class="cart-header">
+                        <div class="lpd-shopping-cart">
+                            <div class="lpd-shopping-cart-wrap"> <a href="https://roll-club.kh.ua/cart/" class="cart-total"><strong>Корзина</strong>	0 шт. - <span class="amount">0,00&nbsp;грн.</span></a> <button class="cart-button"> <span class="cart-button-total">Корзина &nbsp;&nbsp; 0,00 грн</span> <span class="cart-icon"><span class="icon"></span><span class="count">0</span></span> </button>
+                                <div class="cart-dropdown">
+                                    <div class="lpd-shopping-cart-list">
+                                        <p class="empty">Корзина пуста.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-bottom">
+        <div class="container">
+            <div class="header-main-menu">
+                <ul id="menu-main-menu" class="menu">
+                    <li id="menu-item-364273" class="menu-icon-menulist menu-icon menu-item menu-item-type-post_type menu-item-object-page menu-item-364273"><a href="https://roll-club.kh.ua/menu-restaurant/">Ресторан</a></li>
+                    <li id="menu-item-31" class="menu-icon-rolly menu-icon menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-31"><a href="https://roll-club.kh.ua/tovar-category/rolly/">Роллы</a></li>
+                    <li id="menu-item-269636" class="menu-icon-premium menu-icon menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-269636"><a href="https://roll-club.kh.ua/tovar-category/premium/">Премиум</a></li><li id="menu-item-28" class="menu-icon-nabory menu-icon menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-28"><a href="https://roll-club.kh.ua/tovar-category/nabory/">Сеты</a></li><li id="menu-item-288119" class="menu-item-sale menu-icon-aktsiya menu-icon menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-288119"><a href="https://roll-club.kh.ua/tovar-category/aktsiya/">Скидки</a></li><li id="menu-item-130301" class="menu-icon-pizza menu-icon menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-130301"><a href="https://roll-club.kh.ua/tovar-category/pizza/">Пицца</a></li><li id="menu-item-34" class="menu-icon-sushi menu-icon menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-34"><a href="https://roll-club.kh.ua/tovar-category/sushi/">Суши</a></li><li id="menu-item-302254" class="menu-icon-pizza menu-icon menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-302254"><a href="https://roll-club.kh.ua/tovar-category/city-pizza/">City pizza</a></li><li id="menu-item-269653" class="menu-icon-shaurma menu-icon menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-269653"><a href="https://roll-club.kh.ua/tovar-category/shaurma/">Шаурма</a></li><li id="menu-item-20968" class="menu-icon-burger menu-icon menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-20968"><a href="https://roll-club.kh.ua/tovar-category/burger/">Бургеры</a></li><li id="menu-item-968" class="menu-icon-eda-v-korobjchkah menu-icon menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-968"><a href="https://roll-club.kh.ua/tovar-category/eda-v-korobjchkah/">Лапша</a></li><li id="menu-item-27" class="menu-icon-goryachie-blyuda menu-icon menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-27"><a href="https://roll-club.kh.ua/tovar-category/goryachie-blyuda/">Супы</a></li><li id="menu-item-32" class="menu-icon-salaty menu-icon menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-32"><a href="https://roll-club.kh.ua/tovar-category/salaty/">Салаты</a></li><li id="menu-item-6545" class="menu-icon-deserty menu-icon menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-6545"><a href="https://roll-club.kh.ua/tovar-category/deserty/">Десерты</a></li><li id="menu-item-269648" class="menu-icon-napitki menu-icon menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-269648"><a href="https://roll-club.kh.ua/tovar-category/napitki/">Напитки</a></li>
+                    <li id="menu-item-269649" class="menu-icon-sousy menu-icon menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-269649"><a href="https://roll-club.kh.ua/tovar-category/sousy/">Соусы</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 </header><!-- #site-header -->
 
 <?php
