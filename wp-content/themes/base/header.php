@@ -130,4 +130,6 @@ wp_body_open();
 
 </header><!-- #site-header -->
 
+<div class="container">
+    <div class="row">
 <?php

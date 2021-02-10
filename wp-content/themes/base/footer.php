@@ -1,15 +1,20 @@
-	</div><!-- #content -->
+	</div><!-- #content (row) -->
+</div><!-- #page (container) -->
 
-	<footer id="colophon" class="site-footer">
-		<?php $blog_info = get_bloginfo( 'name' ); ?>
-		<?php
-			wp_nav_menu([
-				'menu' => 'footer_menu'
-			]);
-		?>
-	</footer><!-- #colophon -->
+<footer id="colophon" class="site-footer footer">
+	<div class="container">
+		<div class="row">
+			<?php $blog_info = get_bloginfo( 'name' ); ?>
+			<?php
+				wp_nav_menu([
+					'menu' => 'footer_menu'
+				]);
+			?>
+		</div><!-- #content (row) -->
+	</div><!-- #page (container) -->
+</footer><!-- #colophon -->
 
-</div><!-- #page -->
+
 
 <?php wp_footer(); ?>
 

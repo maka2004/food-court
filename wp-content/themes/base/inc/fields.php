@@ -47,5 +47,52 @@
             'active' => true,
             'description' => '',
         ));
+
+        /* Meal - Kitchen */
+        acf_add_local_field_group(array(
+            'key' => 'group_6023dcb1e825d',
+            'title' => 'Принадлежность к кухне',
+            'fields' => array(
+                array(
+                    'key' => 'field_6023dcc99c3de',
+                    'label' => 'Кухня',
+                    'name' => 'kitchen',
+                    'type' => 'post_object',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'post_type' => array(
+                        0 => 'kitchen',
+                    ),
+                    'taxonomy' => '',
+                    'allow_null' => 0,
+                    'multiple' => 0,
+                    'return_format' => 'object',
+                    'ui' => 1,
+                ),
+            ),
+            'location' => array(
+                array(
+                    array(
+                        'param' => 'post_type',
+                        'operator' => '==',
+                        'value' => 'meal',
+                    ),
+                ),
+            ),
+            'menu_order' => 0,
+            'position' => 'normal',
+            'style' => 'default',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => '',
+            'active' => true,
+            'description' => '',
+        ));
         
     }

@@ -1,5 +1,7 @@
 .header-top {
-	background-color: #ffe10b; /*#f5f206*/
+	background-color: #f5f206;
+	background-color: #ffe10b;
+	background-color: #02d86b; /*#f5f206 #ffe10b*/
 }
 
 .header-top .container {
@@ -200,6 +202,60 @@
 
 .header-main-menu .menu-icon-pizza>a:before {
 	background-image: url(../../../../../../../../themes/rollclub/assets/images/menu-icons/menu-icon-pizza.svg)
+}
+
+/* Footer */
+.footer {
+	position: relative;
+	padding: 1.5rem 0;
+	color: #fff;
+	font-size: .8125rem;
+	background: #231f20
+}
+
+/* Front page */
+/* Kitchen panel */
+.kitchen-container {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: space-between;
+	flex-wrap: wrap;
+}
+
+.kitchen-item {
+	/*height: 25rem;*/
+	width: 20rem;
+	margin: 0 3rem 3rem 0;
+}
+
+.kitchen-item .image {
+	height: 20rem;
+	width: 20rem;
+}
+
+.kitchen-item .image img {
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border-width: 6px;
+	border-style: solid;
+	border-color: #001d0847;
+}
+
+.kitchen-item .title {
+	display: block;
+	font-size: 1.5rem;
+	text-align: center;
+	color: #444;
+	margin-top: 2rem;
+	white-space: normal;
+    text-transform: uppercase;
+}
+
+.kitchen-item .hint {
+	display: none;
 }
 
 @media (max-width:1199px) {
