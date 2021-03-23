@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <div class="kitchen-container">
     <?php
-        $kitchens = get_kitchens_list();
+        $kitchens = \base\inc\classes\Kitchen::getAll();
         foreach ($kitchens as $kitchen) : ?>
         <div class="kitchen-item">
             <div class="image">

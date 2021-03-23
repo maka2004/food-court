@@ -31,7 +31,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b18e0858-a47e-4f91-aeee-4aca580a2024" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/base/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/base/inc/classes/Constants.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/base/inc/classes/Kitchen.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/base/inc/classes/customAutoLoad.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/staff.loc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/staff.loc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/base/front-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/base/front-page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/base/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/base/functions.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +68,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/themes/base/inc" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -87,15 +99,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="588" y="214" width="800" height="677" key="#Deployment" timestamp="1605516375580">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="588" y="214" width="800" height="677" key="#Deployment/67.27.1853.1053/67.27.1853.1053@67.27.1853.1053" timestamp="1605516375580" />
-    <state x="789" y="478" width="399" height="149" key="NewPhpFileDialog" timestamp="1605516465698">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="789" y="478" width="399" height="149" key="NewPhpFileDialog/67.27.1853.1053/67.27.1853.1053@67.27.1853.1053" timestamp="1605516465698" />
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
