@@ -1,21 +1,15 @@
 <?php
 
 function customAutoLoad() {
-//    include_once($filename);
-//    echo "-------------------------";
     $files = scandir(__DIR__);
     foreach ($files as $file) {
-        if ( stripos($file, '.php') !== false && $file != 'customAutoLoad.php') {
+        if ( stripos($file, '.php') !== false ) {
             $content = file_get_contents(__DIR__ . '/' . $file);
-            if ( stripos($content, 'class') !== false ) {
-//                echo $file . '<br>';
-//                echo $content . '<br>';
+            if ( stripos($content, 'cla' . 'ss') !== false ) { // trick for autoload file
                     include_once __DIR__ . '/' . $file;
             }
         }
     }
-//    print_r($files); die();
-//    file_get_contents();
 }
 
 // регистрируем загрузчик
