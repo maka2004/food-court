@@ -1,5 +1,6 @@
-	</div><!-- #content (row) -->
-</div><!-- #page (container) -->
+		</div><!-- #content (row) -->
+	</div><!-- #page (container) -->
+</div><!-- page-wrapper -->
 
 <footer id="colophon" class="site-footer footer">
 	<div class="container">
@@ -13,8 +14,6 @@
 		</div><!-- #content (row) -->
 	</div><!-- #page (container) -->
 </footer><!-- #colophon -->
-
-
 
 <?php wp_footer(); ?>
 
