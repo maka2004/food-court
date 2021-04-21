@@ -98,7 +98,7 @@ wp_body_open();
                     </div>
                     <div class="logo-wrap">
                         <div class="logo">
-                            
+                                <a href="/" class="full-block"></a>
                                 <img src="<?php echo THEME_PATH . '/img/food-court-logo_main.png'; ?>" alt="Food-Court">
                             
                         </div>

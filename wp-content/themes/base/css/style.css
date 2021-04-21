@@ -6,6 +6,13 @@ body {
 	display: flex;
 	flex-direction: column;
 }
+.full-block {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
 .page-wrapper {
 	flex: 1 0 auto;
 }
@@ -59,6 +66,10 @@ body {
 .header .header-top .menu .current-menu-item a,
 .header .header-top .menu a:hover {
 	color: #333
+}
+
+.header-middle .logo-wrap {
+	position: relative;
 }
 
 .header-top__right {
