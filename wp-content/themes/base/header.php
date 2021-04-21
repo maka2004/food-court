@@ -126,11 +126,13 @@ wp_body_open();
                     <ul id="menu-main-menu" class="menu">
                         <?php
                             $meals_menu = get_field('meals_menu', 'option');
-                            foreach ($meals_menu as $meal): ?>
-                                <li class="menu-icon-<?php echo $meal->slug; ?> menu-icon menu-item menu-item-type-taxonomy">
-                                    <a href="<?php echo get_term_link($meal->term_taxonomy_id); ?>"><?php echo $meal->name; ?></a>
-                                </li>
-                            <?php endforeach; ?>
+                            if (isset($meals_menu)):
+                                foreach ($meals_menu as $meal): ?>
+                                    <li class="menu-icon-<?php echo $meal->slug; ?> menu-icon menu-item menu-item-type-taxonomy">
+                                        <a href="<?php echo get_term_link($meal->term_taxonomy_id); ?>"><?php echo $meal->name; ?></a>
+                                    </li>
+                                <?php endforeach;
+                            endif; ?>
                         <!--<li id="menu-item-364273" class="menu-icon-menulist menu-icon menu-item menu-item-type-post_type menu-item-object-page menu-item-364273"><a href="https://roll-club.kh.ua/menu-restaurant/">Ресторан</a></li>
                         <li id="menu-item-31" class="menu-icon-rolly menu-icon menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-31"><a href="https://roll-club.kh.ua/tovar-category/rolly/">Роллы</a></li>
                         <li id="menu-item-269636" class="menu-icon-premium menu-icon menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-269636"><a href="https://roll-club.kh.ua/tovar-category/premium/">Премиум</a></li>
