@@ -126,22 +126,22 @@ function register_post_types(){
         'query_var'           => true,
     ] );
 
-    /* Category Kitchen */
-    register_post_type( Constants::POST_TYPE_KITCHEN, [
+    /* Category Cuisine */
+    register_post_type( Constants::POST_TYPE_CUISINE, [
         'label'  => null,
         'labels' => [
-            'name'               => 'Kitchen',
-            'singular_name'      => 'Kitchen',
-            'add_new'            => 'Добавить Kitchen',
-            'add_new_item'       => 'Добавление Kitchen',
-            'edit_item'          => 'Редактирование Kitchen',
-            'new_item'           => 'Новое Kitchen',
-            'view_item'          => 'Смотреть Kitchen',
-            'search_items'       => 'Искать Kitchen',
+            'name'               => 'Cuisine',
+            'singular_name'      => 'Cuisine',
+            'add_new'            => 'Добавить Cuisine',
+            'add_new_item'       => 'Добавление Cuisine',
+            'edit_item'          => 'Редактирование Cuisine',
+            'new_item'           => 'Новое Cuisine',
+            'view_item'          => 'Смотреть Cuisine',
+            'search_items'       => 'Искать Cuisine',
             'not_found'          => 'Не найдено',
             'not_found_in_trash' => 'Не найдено в корзине',
             'parent_item_colon'  => '',
-            'menu_name'          => 'Kitchens',
+            'menu_name'          => 'Cuisines',
         ],
         'description'         => '',
         'public'              => true,

@@ -229,8 +229,8 @@ body {
 }
 
 /* Front page */
-/* Kitchen panel */
-.kitchen-container {
+/* Cuisine panel */
+.cuisine-container {
 	position: relative;
 	display: flex;
 	flex-direction: row;
@@ -239,18 +239,18 @@ body {
 	flex-wrap: wrap;
 }
 
-.kitchen-item {
+.cuisine-item {
 	/*height: 25rem;*/
 	width: 20rem;
 	margin: 0 3rem 3rem 0;
 }
 
-.kitchen-item .image {
+.cuisine-item .image {
 	height: 20rem;
 	width: 20rem;
 }
 
-.kitchen-item .image img {
+.cuisine-item .image img {
 	height: 100%;
 	width: 100%;
 	border-radius: 50%;
@@ -259,7 +259,7 @@ body {
 	border-color: #001d0847;
 }
 
-.kitchen-item .title {
+.cuisine-item .title {
 	display: block;
 	font-size: 1.5rem;
 	text-align: center;
@@ -269,7 +269,7 @@ body {
     text-transform: uppercase;
 }
 
-.kitchen-item .hint {
+.cuisine-item .hint {
 	display: none;
 }
 

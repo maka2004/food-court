@@ -9,7 +9,7 @@
                 array(
                     'key' => 'field_601ab61b49bf6',
                     'label' => 'Категория кухни',
-                    'name' => 'kitchen_category',
+                    'name' => 'cuisine_category',
                     'type' => 'post_object',
                     'instructions' => '',
                     'required' => 0,
@@ -20,7 +20,7 @@
                         'id' => '',
                     ),
                     'post_type' => array(
-                        0 => 'kitchen',
+                        0 => 'cuisine',
                     ),
                     'taxonomy' => '',
                     'allow_null' => 0,
@@ -48,7 +48,7 @@
             'description' => '',
         ));
 
-        /* Meal - Kitchen */
+        /* Meal - Cuisine */
         acf_add_local_field_group(array(
             'key' => 'group_6023dcb1e825d',
             'title' => 'Принадлежность к кухне',
@@ -56,7 +56,7 @@
                 array(
                     'key' => 'field_6023dcc99c3de',
                     'label' => 'Кухня',
-                    'name' => 'kitchen',
+                    'name' => 'cuisine',
                     'type' => 'post_object',
                     'instructions' => '',
                     'required' => 0,
@@ -67,7 +67,7 @@
                         'id' => '',
                     ),
                     'post_type' => array(
-                        0 => 'kitchen',
+                        0 => 'cuisine',
                     ),
                     'taxonomy' => '',
                     'allow_null' => 0,

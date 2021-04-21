@@ -1,17 +1,20 @@
+<?php
+    use \base\inc\classes\Cuisine as Cuisine;
+?>
 <?php get_header(); ?>
-    <div class="kitchen-container">
+    <div class="cuisine-container">
     <?php
-        $kitchens = \base\inc\classes\Kitchen::getAll();
-        foreach ($kitchens as $kitchen) : ?>
-        <div class="kitchen-item">
+    $cuisines = Cuisine::getAll();
+        foreach ($cuisines as $cuisine) : ?>
+        <div class="cuisine-item">
             <div class="image">
-                <img src="<?php echo $kitchen['image']; ?>" alt="<?php echo $kitchen['title']; ?>">
+                <img src="<?php echo $cuisine['image']; ?>" alt="<?php echo $cuisine['title']; ?>">
             </div>
             <div class="title">
-                <span><?php echo $kitchen['title']; ?></span>
+                <span><?php echo $cuisine['title']; ?></span>
             </div>
             <div class="hint">
-                <span><?php echo $kitchen['description']; ?></span>
+                <span><?php echo $cuisine['description']; ?></span>
             </div>
         </div>
     <?php

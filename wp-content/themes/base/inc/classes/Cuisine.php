@@ -2,7 +2,7 @@
 
 namespace base\inc\classes;
 
-class Kitchen {
+class Cuisine {
 
     /**
      * @return array
@@ -11,20 +11,20 @@ class Kitchen {
     {
         $posts = get_posts([
             'numberposts' => 0,
-            'post_type'   => Constants::POST_TYPE_KITCHEN,
+            'post_type'   => Constants::POST_TYPE_CUISINE,
             'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
         ]);
 
-        $kitchens = [];
+        $cuisines = [];
 
         foreach( $posts as $post ) {
-            $kitchens[$post->ID] = [
+            $cuisines[$post->ID] = [
                 'title' => urldecode($post->post_name),
                 'image' => get_the_post_thumbnail_url($post->ID, 'thumbnail'),
                 'description' => $post->post_content
             ];
         }
 
-        return $kitchens;
+        return $cuisines;
     }
 }
