@@ -1,4 +1,6 @@
 <?php
+    use \base\inc\classes\Constants as Constants;
+
     if( function_exists('acf_add_local_field_group') ) {
 
         /* Theme options */
@@ -102,7 +104,7 @@
                         'id' => '',
                     ),
                     'post_type' => array(
-                        0 => 'cuisine',
+                        0 => Constants::POST_TYPE_CUISINE,
                     ),
                     'taxonomy' => '',
                     'allow_null' => 0,
@@ -116,7 +118,7 @@
                     array(
                         'param' => 'post_type',
                         'operator' => '==',
-                        'value' => 'point',
+                        'value' => Constants::POST_TYPE_POINT,
                     ),
                 ),
             ),
@@ -149,7 +151,7 @@
                         'id' => '',
                     ),
                     'post_type' => array(
-                        0 => 'cuisine',
+                        0 => Constants::POST_TYPE_CUISINE,
                     ),
                     'taxonomy' => '',
                     'allow_null' => 0,
@@ -163,7 +165,7 @@
                     array(
                         'param' => 'post_type',
                         'operator' => '==',
-                        'value' => 'meal',
+                        'value' => Constants::POST_TYPE_MEAL,
                     ),
                 ),
             ),
