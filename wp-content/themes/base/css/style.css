@@ -285,6 +285,20 @@ body {
 	display: none;
 }
 
+.meal-list-img-main {
+	max-height: 4em;
+	max-width: 4em;
+}
+
+/* Meal Page */
+.meal-page {
+	/*/*/
+}
+.meal-page .img-main {
+	max-height: 27em;
+	max-width: 27em;
+}
+
 @media (max-width:1199px) {
 	.header-top li {
 		margin-right: 15px
