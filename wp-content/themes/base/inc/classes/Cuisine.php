@@ -19,6 +19,7 @@ class Cuisine {
 
         foreach( $posts as $post ) {
             $cuisines[$post->ID] = [
+                'id' => $post->ID,
                 'title' => urldecode($post->post_name),
                 'image' => get_the_post_thumbnail_url($post->ID, 'thumbnail'),
                 'description' => $post->post_content

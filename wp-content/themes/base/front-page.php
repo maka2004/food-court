@@ -7,6 +7,7 @@
     $cuisines = Cuisine::getAll();
         foreach ($cuisines as $cuisine) : ?>
         <div class="cuisine-item">
+            <a href="<?php echo get_permalink($cuisine['id']); ?>" class="full-block"></a>
             <div class="image">
                 <img src="<?php echo $cuisine['image']; ?>" alt="<?php echo $cuisine['title']; ?>">
             </div>
@@ -21,6 +22,6 @@
         endforeach;
     ?>
     </div>
-    <h2><?php echo get_the_title(); ?></h2>
+    <h2><?php //echo get_the_title(); ?></h2>
     <?php // get_sidebar(); ?>
 <?php get_footer(); ?>

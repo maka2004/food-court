@@ -2,7 +2,6 @@
     use \base\inc\classes\Constants as Constants;
 ?>
 <?php get_header(); ?>
-    <div class="cuisine-container">
 <?php
     $slug = get_queried_object()->slug;
 
@@ -26,5 +25,4 @@
         </div>
     <?php endforeach; ?>
 
-    <h2><?php // echo get_the_title(); ?></h2>
 <?php get_footer(); ?>

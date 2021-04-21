@@ -1,6 +1,3 @@
-<?php
-    use \base\inc\classes\Constants as Constants;
-?>
 <?php get_header(); ?>
     <?php
         print_r(get_queried_object());
