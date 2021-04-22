@@ -24,7 +24,9 @@ function header_options_page() {
     add_options_page('Header options', 'Header options', 'manage_options', 'header_options', '', null);
 }
 
-//
+/**
+ * Theme Options Page
+ */
 if (function_exists('acf_add_options_page')) {
     acf_add_options_page(array(
         'page_title'    => __('Theme General Settings'),
@@ -35,6 +37,22 @@ if (function_exists('acf_add_options_page')) {
     ));
     // acf_add_options_sub_page( 'Header' );
     // acf_add_options_sub_page( 'Footer' );
+}
+
+/**
+ * Get template part with data
+ * @param $template_path - path from theme root, without slash
+ * @param $data - processing in template
+ */
+function get_template_with_data ($template_path, $data) {
+    $path = __DIR__ . '/' . $template_path;
+    ob_start();
+
+    if (file_exists($path)) {
+        include $path;
+    }
+
+    return ob_get_clean();
 }
 
 /* Scripts */
