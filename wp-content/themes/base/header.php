@@ -126,10 +126,11 @@ wp_body_open();
                     <ul id="menu-main-menu" class="menu">
                         <?php
                             $meals_menu = get_field('meals_menu', 'option');
+//                            print_r($meals_menu);
                             if (isset($meals_menu)):
                                 foreach ($meals_menu as $meal): ?>
-                                    <li class="menu-icon-<?php echo $meal->slug; ?> menu-icon menu-item menu-item-type-taxonomy">
-                                        <a href="<?php echo get_term_link($meal->term_taxonomy_id); ?>"><?php echo $meal->name; ?></a>
+                                    <li class="menu-icon-<?php //echo $meal->slug; ?> menu-icon menu-item menu-item-type-taxonomy">
+                                        <a href="<?php echo get_permalink($meal->ID); ?>"><?php echo $meal->post_title; ?></a>
                                     </li>
                                 <?php endforeach;
                             endif; ?>

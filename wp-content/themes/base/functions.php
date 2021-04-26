@@ -68,38 +68,38 @@ function theme_add_scripts() {
 }
 
 /* Taxonomies */
-add_action( 'init', 'create_taxonomy' );
-function create_taxonomy(){
-
-    // Meal type
-    register_taxonomy( 'taxonomy', [ Constants::POST_TYPE_MEAL ], [
-        'label'                 => '', // определяется параметром $labels->name
-        'labels'                => [
-            'name'              => 'Meal types',
-            'singular_name'     => 'Meal type',
-            'search_items'      => 'Search Meal types',
-            'all_items'         => 'All Meal types',
-            'view_item '        => 'View Meal type',
-            'parent_item'       => 'Parent Meal type',
-            'parent_item_colon' => 'Parent Meal type:',
-            'edit_item'         => 'Edit Meal type',
-            'update_item'       => 'Update Meal type',
-            'add_new_item'      => 'Add New Meal type',
-            'new_item_name'     => 'New Meal type Name',
-            'menu_name'         => 'Meal type',
-        ],
-        'description'           => 'Тип блюда (первое, второе)',
-        'public'                => true,
-        'hierarchical'          => false,
-
-        'rewrite'               => true,
-        'capabilities'          => array(),
-        'meta_box_cb'           => null, // html метабокса. callback: `post_categories_meta_box` или `post_tags_meta_box`. false — метабокс отключен.
-        'show_admin_column'     => false, // авто-создание колонки таксы в таблице ассоциированного типа записи. (с версии 3.5)
-        'show_in_rest'          => null,
-        'rest_base'             => null,
-    ] );
-}
+//add_action( 'init', 'create_taxonomy' );
+//function create_taxonomy(){
+//
+//    // Meal type
+//    register_taxonomy( 'taxonomy', [ Constants::POST_TYPE_MEAL ], [
+//        'label'                 => '', // определяется параметром $labels->name
+//        'labels'                => [
+//            'name'              => 'Meal types',
+//            'singular_name'     => 'Meal type',
+//            'search_items'      => 'Search Meal types',
+//            'all_items'         => 'All Meal types',
+//            'view_item '        => 'View Meal type',
+//            'parent_item'       => 'Parent Meal type',
+//            'parent_item_colon' => 'Parent Meal type:',
+//            'edit_item'         => 'Edit Meal type',
+//            'update_item'       => 'Update Meal type',
+//            'add_new_item'      => 'Add New Meal type',
+//            'new_item_name'     => 'New Meal type Name',
+//            'menu_name'         => 'Meal type',
+//        ],
+//        'description'           => 'Тип блюда (первое, второе)',
+//        'public'                => true,
+//        'hierarchical'          => false,
+//
+//        'rewrite'               => true,
+//        'capabilities'          => array(),
+//        'meta_box_cb'           => null, // html метабокса. callback: `post_categories_meta_box` или `post_tags_meta_box`. false — метабокс отключен.
+//        'show_admin_column'     => false, // авто-создание колонки таксы в таблице ассоциированного типа записи. (с версии 3.5)
+//        'show_in_rest'          => null,
+//        'rest_base'             => null,
+//    ] );
+//}
 
 /* Post types */
 add_action( 'init', 'register_post_types' );
@@ -207,6 +207,39 @@ function register_post_types(){
         'rewrite'             => true,
         'query_var'           => true,
     ] );
+
+    /* Meal type */
+    register_post_type( Constants::POST_TYPE_MEAL_TYPE, [
+        'label'  => null,
+        'labels' => [
+            'name'               => 'Meal type',
+            'singular_name'      => 'Meal types',
+            'add_new'            => 'Добавить Meal type',
+            'add_new_item'       => 'Добавление Meal type',
+            'edit_item'          => 'Редактирование Meal type',
+            'new_item'           => 'Новый Meal type',
+            'view_item'          => 'Смотреть Meal types',
+            'search_items'       => 'Искать Meal types',
+            'not_found'          => 'Не найдено',
+            'not_found_in_trash' => 'Не найдено в корзине',
+            'parent_item_colon'  => '',
+            'menu_name'          => 'Meal types',
+        ],
+        'description'         => '',
+        'public'              => true,
+        'show_in_menu'        => null,
+        'show_in_rest'        => null,
+        'rest_base'           => null,
+        'menu_position'       => null,
+        'menu_icon'           => 'dashicons-carrot',
+        'hierarchical'        => false,
+        'supports'            => [ 'title', 'editor', 'thumbnail' ],
+        'taxonomies'          => [],
+        'has_archive'         => true,
+        'rewrite'             => true,
+        'query_var'           => true,
+    ] );
+
 }
 
 /* ACF fields */
