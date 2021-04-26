@@ -135,7 +135,7 @@
         /* Meal - Cuisine */
         acf_add_local_field_group(array(
             'key' => 'group_6023dcb1e825d',
-            'title' => 'Принадлежность к кухне',
+            'title' => 'Свойства блюда',
             'fields' => array(
                 array(
                     'key' => 'field_6023dcc99c3de',
@@ -146,12 +146,34 @@
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
-                        'width' => '',
+                        'width' => '50%',
                         'class' => '',
                         'id' => '',
                     ),
                     'post_type' => array(
                         0 => Constants::POST_TYPE_CUISINE,
+                    ),
+                    'taxonomy' => '',
+                    'allow_null' => 0,
+                    'multiple' => 0,
+                    'return_format' => 'object',
+                    'ui' => 1,
+                ),
+                array(
+                    'key' => 'field_6023dcc99c3df',
+                    'label' => 'Ресторан',
+                    'name' => 'point',
+                    'type' => 'post_object',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '50%',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'post_type' => array(
+                        0 => Constants::POST_TYPE_POINT,
                     ),
                     'taxonomy' => '',
                     'allow_null' => 0,

@@ -1,13 +1,13 @@
 <?php
     use \base\inc\classes\Constants as Constants;
+
+    get_header();
+
+    $cuisine = get_queried_object();
+    // print_r(get_queried_object());
 ?>
-<?php get_header(); ?>
     <h2><?php echo get_the_title(); ?></h2>
-    <?php
-        $cuisine = get_queried_object();
-        print_r(get_queried_object());
-    ?>
-<br><br>
+    <br><br>
     <?php
         $meals = get_posts(
             array(
